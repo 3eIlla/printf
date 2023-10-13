@@ -15,7 +15,7 @@ int (*get_specifier(char *s))(va_list arpp, paras_t *paras)
 		{"%", print_percent},
 /*1*/
 		{"d", print_int},
-		{"lil", print_int},
+		{"i", print_int},
 /*1*/
 		{"b", print_binary},
 /*3*/
@@ -33,8 +33,8 @@ int (*get_specifier(char *s))(va_list arpp, paras_t *paras)
 		{"R", print_rot13},
 		{NULL, NULL}
 	};
-	int lil;
 
+	int lil;
 	for (lil = 0; specifiers[lil].specifier; lil++)
 	{
 		if (*s == specifiers[lil].specifier[0])
