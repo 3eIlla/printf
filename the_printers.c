@@ -42,7 +42,7 @@ int print_rev(va_list ap, params_t *params)
 
 	if (str)
 	{
-		for (len = 0; *str; str++)
+		for (lens = 0; *str; str++)
 			lens++;
 		str--;
 		for (; lens > 0; lens--, str--)
