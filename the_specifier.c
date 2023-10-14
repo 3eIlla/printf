@@ -22,6 +22,7 @@ int get_print_func(char *s, va_list ap, params_t *params)
 // i
 /**
  * get_flag - finds the flag func
+ *
  * @s: the format string
  * @params: the parameters struct
  *
