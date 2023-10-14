@@ -24,7 +24,7 @@ int print_char(va_list ap, params_t *params)
 	return (sum);
 }
 
-/*l*/
+/*l2s*/
 /**
  * print_int - ints
  *
@@ -35,18 +35,18 @@ int print_char(va_list ap, params_t *params)
  */
 int print_int(va_list ap, params_t *params)
 {
-	long l;
+	long s;
 
 	if (params->l_modifier)
-		l = va_arg(ap, long);
+		s = va_arg(ap, long);
 	else if (params->h_modifier)
-		l = (short int)va_arg(ap, int);
+		s = (short int)va_arg(ap, int);
 	else
-		l = (int)va_arg(ap, int);
-	return (print_number(convert(l, 10, 0, params), params));
+		s = (int)va_arg(ap, int);
+	return (print_number(convert(s, 10, 0, params), params));
 }
 
-/*i + j*/
+/*i2l + j2k*/
 /**
  * print_string - strin
  *
@@ -57,7 +57,7 @@ int print_int(va_list ap, params_t *params)
  */
 int print_string(va_list ap, params_t *params)
 {
-	unsigned int i = 0, j;
+	unsigned int l = 0, k;
 		unsigned int pad = 0, sum = 0;
 		char *str = va_arg(ap, char *), pad_char = ' ';
 
@@ -67,24 +67,24 @@ int print_string(va_list ap, params_t *params)
 		case 1:
 			str = NULL_STRING;
 
-	j = pad = _strlen(str);
+	k = pad = _strlen(str);
 	if (params->precision < pad)
-		j = pad = params->precision;
+		k = pad = params->precision;
 
 	if (params->minus_flag)
 	{
 		if (params->precision != UINT_MAX)
-			for (i = 0; i < pad; i++)
+			for (l = 0; l < pad; l++)
 				sum += _putchar(*str++);
 		else
 			sum += _puts(str);
 	}
-	while (j++ < params->width)
+	while (k++ < params->width)
 		sum += _putchar(pad_char);
 	if (!params->minus_flag)
 	{
 		if (params->precision != UINT_MAX)
-			for (i = 0; i < pad; i++)
+			for (l = 0; l < pad; l++)
 				sum += _putchar(*str++);
 		else
 			sum += _puts(str);

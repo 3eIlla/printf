@@ -19,7 +19,7 @@ int get_print_func(char *s, va_list ap, params_t *params)
 	return (0);
 }
 
-/*i*/
+/*i2y*/
 /**
  * get_flag - finds the flag func
  *
@@ -53,7 +53,7 @@ int get_flag(char *s, params_t *params)
 	return (y);
 }
 
-/*i*/
+/*i2y*/
 /**
  * get_modifier - modifier func
  *

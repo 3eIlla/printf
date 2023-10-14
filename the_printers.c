@@ -24,7 +24,7 @@ int print_from_to(char *start, char *stop, char *except)
 	return (sum);
 }
 
-/*len*/
+/*len2lens*/
 /**
  * print_rev - string n reverse
  *
@@ -35,7 +35,7 @@ int print_from_to(char *start, char *stop, char *except)
  */
 int print_rev(va_list ap, params_t *params)
 {
-	int len;
+	int lens;
 	int sum = 0;
 	char *str = va_arg(ap, char *);
 	(void)params;
@@ -43,15 +43,15 @@ int print_rev(va_list ap, params_t *params)
 	if (str)
 	{
 		for (len = 0; *str; str++)
-			len++;
+			lens++;
 		str--;
-		for (; len > 0; len--, str--)
+		for (; lens > 0; lens--, str--)
 			sum += _putchar(*str);
 	}
 	return (sum);
 }
 
-/* i + index*/
+/* i to (l) + index(ind)*/
 /**
  * print_rot13 - prints string in rot13
  *
@@ -62,26 +62,26 @@ int print_rev(va_list ap, params_t *params)
  */
 int print_rot13(va_list ap, params_t *params)
 {
-	int i, index;
+	int l, ind;
 	int count = 0;
 	char arr[] =
 		"NOPQRSTUVWXYZABCDEFGHIJKLM      nopqrstuvwxyzabcdefghijklm";
 	char *a = va_arg(ap, char *);
 	(void)params;
 
-	i = 0;
-	index = 0;
-	while (a[i])
+	l = 0;
+	ind = 0;
+	while (a[l])
 	{
-		if ((a[i] >= 'A' && a[i] <= 'Z')
-		    || (a[i] >= 'a' && a[i] <= 'z'))
+		if ((a[l] >= 'A' && a[l] <= 'Z')
+		    || (a[l] >= 'a' && a[l] <= 'z'))
 		{
-			index = a[i] - 65;
-			count += _putchar(arr[index]);
+			ind = a[l] - 65;
+			count += _putchar(arr[ind]);
 		}
 		else
-			count += _putchar(a[i]);
-		i++;
+			count += _putchar(a[l]);
+		l++;
 	}
 	return (count);
 }
