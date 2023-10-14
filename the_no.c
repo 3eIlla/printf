@@ -1,13 +1,13 @@
 #include "main.h"
 /*edit done*/
-/*ptr + array + sign*/ 
+/*ptr + array + sign*/
 /**
  * convert - converter funcss 2  clone o itoa
  *
  * @num: no
  * @base: base
  * @flags: argums flags
- * @paras: params struct
+ * @params: params struct
  *
  * Return: strin
  */
@@ -56,7 +56,7 @@ int print_address(va_list ap, params_t *params)
 {
 	char *str;
 	unsigned long int x = va_arg(ap, unsigned long int);
-	
+
 
 	if (!x)
 		return (_puts("(nil)"));

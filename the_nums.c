@@ -33,7 +33,7 @@ int print_number(char *str, params_t *params)
 		return (print_number_left_shift(str, params));
 }
 
-/*i + n*/ 
+/*i + n*/
 /**
  * print_number_right_shift - no. with options
  *
@@ -78,10 +78,10 @@ int print_number_right_shift(char *str, params_t *params)
 	return (n);
 }
 
-/*neg 1 + neg 2  (same :: up & dowm)*/ 
+/*neg 1 + neg 2  (same :: up & dowm)*/
 
 
-/*i + n*/ 
+/*i + n*/
 /**
  * print_number_left_shift - no. with options
  *
