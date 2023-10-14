@@ -1,6 +1,6 @@
 #include "main.h"
 
-// non
+/*none*/
 /**
  * print_char - chars
  *
@@ -24,7 +24,7 @@ int print_char(va_list ap, params_t *params)
 	return (sum);
 }
 
-// l
+/*l*/
 /**
  * print_int - ints
  *
@@ -46,7 +46,7 @@ int print_int(va_list ap, params_t *params)
 	return (print_number(convert(l, 10, 0, params), params));
 }
 
-// i + j
+/*i + j*/
 /**
  * print_string - strin
  *
@@ -92,7 +92,7 @@ int print_string(va_list ap, params_t *params)
 	return (sum);
 }
 
-//non
+/*none*/
 /**
  * print_S -  specifier's custom form
  *
