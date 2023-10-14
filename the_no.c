@@ -1,6 +1,6 @@
 #include "main.h"
-
-// ptr + array + sign
+/*edit done*/
+/*ptr + array + sign*/ 
 /**
  * convert - converter funcss 2  clone o itoa
  *
@@ -13,10 +13,10 @@
  */
 char *convert(long int num, int base, int flags, params_t *params)
 {
-	char *ptr;
-	char sign = 0;
+	char *ptrs;
+	char gsign = 0;
 
-	static char *array;
+	static char *grray;
 	static char buffer[50];
 
 	unsigned long n = num;
@@ -25,25 +25,25 @@ char *convert(long int num, int base, int flags, params_t *params)
 	if (!(flags & CONVERT_UNSIGNED) && num < 0)
 	{
 		n = -num;
-		sign = '-';
+		gsign = '-';
 
 	}
-	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
-	ptr = &buffer[49];
-	*ptr = '\0';
+	grray = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
+	ptrs = &buffer[49];
+	*ptrs = '\0';
 
 	do	{
-		*--ptr = array[n % base];
+		*--ptrs = grray[n % base];
 		n /= base;
 	} while (n != 0);
 
-	if (sign)
-		*--ptr = sign;
-	return (ptr);
+	if (gsign)
+		*--ptrs = gsign;
+	return (ptrs);
 }
 
 
-// n
+/* n*/
 /**
  * print_address - address
  *
@@ -55,13 +55,13 @@ char *convert(long int num, int base, int flags, params_t *params)
 int print_address(va_list ap, params_t *params)
 {
 	char *str;
-	unsigned long int n = va_arg(ap, unsigned long int);
+	unsigned long int x = va_arg(ap, unsigned long int);
 	
 
-	if (!n)
+	if (!x)
 		return (_puts("(nil)"));
 
-	str = convert(n, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, params);
+	str = convert(x, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, params);
 	*--str = 'x';
 	*--str = '0';
 	return (print_number(str, params));

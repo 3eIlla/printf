@@ -1,7 +1,7 @@
 #include "main.h"
 
 
-//non
+/*none*/
 /**
  * print_percent - strin
  *
@@ -18,7 +18,7 @@ int print_percent(va_list ap, params_t *params)
 }
 
 
-//non
+/*none*/
 /**
  * init_paras - clears struct & reset buf
  *
