@@ -1,6 +1,6 @@
 #include "main.h"
 
-// i
+/*i*/
 /**
  * get_specifier - finds z formats funcs
  *
@@ -49,7 +49,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 }
 
 
-// d
+/*d*/
 /**
  * get_width - width from strin
  *

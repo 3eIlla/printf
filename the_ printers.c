@@ -1,7 +1,7 @@
 #include "main.h"
 
 
-// non
+/* non */
 /**
  * print_from_to - range o chars addresses
  *
@@ -24,7 +24,7 @@ int print_from_to(char *start, char *stop, char *except)
 	return (sum);
 }
 
-// len
+/*len*/
 /**
  * print_rev - string n reverse
  *
@@ -51,7 +51,7 @@ int print_rev(va_list ap, params_t *params)
 	return (sum);
 }
 
-// I + index
+/* i + index*/
 /**
  * print_rot13 - prints string in rot13
  *

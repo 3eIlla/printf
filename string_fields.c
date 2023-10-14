@@ -1,7 +1,7 @@
 #include "main.h"
 
 
-// d
+/*d*/
 /**
  * get_precision -  precision from strin
  *
