@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*i*/
+/*i 2 lil **/
 /**
  * get_specifier - finds z formats funcs
  *
@@ -36,21 +36,21 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 		{NULL, NULL}
 	};
 
-	int i = 0;
+	int lil = 0;
 
-	while (specifiers[i].specifier)
+	while (specifiers[lil].specifier)
 	{
-		if (*s == specifiers[i].specifier[0])
+		if (*s == specifiers[lil].specifier[0])
 		{
-			return (specifiers[i].f);
+			return (specifiers[lil].f);
 		}
-		i++;
+		lil++;
 	}
 	return (NULL);
 }
 
 
-/*d*/
+/*d 2 dol*/
 /**
  * get_width - width from strin
  *
@@ -62,18 +62,18 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
  */
 char *get_width(char *s, params_t *params, va_list ap)
 {
-	int d = 0;
+	int dol = 0;
 
 	if (*s == '*')
 	{
-		d = va_arg(ap, int);
+		dol = va_arg(ap, int);
 		s++;
 	}
 	else
 	{
 		while (_isdigit(*s))
-			d = d * 10 + (*s++ - '0');
+			dol = dol * 10 + (*s++ - '0');
 	}
-	params->width = d;
+	params->width = dol;
 	return (s);
 }

@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*l*/
+/*l 2 lol*/
 /**
  * print_unsigned - unsigned integer no.
  *
@@ -11,16 +11,16 @@
  */
 int print_unsigned(va_list ap, params_t *params)
 {
-	unsigned long l;
+	unsigned long lol;
 
 	if (params->l_modifier)
-		l = (unsigned long)va_arg(ap, unsigned long);
+		lol = (unsigned long)va_arg(ap, unsigned long);
 	else if (params->h_modifier)
-		l = (unsigned short int)va_arg(ap, unsigned int);
+		lol = (unsigned short int)va_arg(ap, unsigned int);
 	else
-		l = (unsigned int)va_arg(ap, unsigned int);
+		lol = (unsigned int)va_arg(ap, unsigned int);
 	params->unsign = 1;
-	return (print_number(convert(l, 10, CONVERT_UNSIGNED, params), params));
+	return (print_number(convert(lol, 10, CONVERT_UNSIGNED, params), params));
 }
 
 
@@ -34,19 +34,19 @@ int print_unsigned(va_list ap, params_t *params)
  */
 int print_hex(va_list ap, params_t *params)
 {
-	unsigned long l;
+	unsigned long lol;
 	int c = 0;
 	char *str;
 
 	if (params->l_modifier)
-		l = (unsigned long)va_arg(ap, unsigned long);
+		lol = (unsigned long)va_arg(ap, unsigned long);
 	else if (params->h_modifier)
-		l = (unsigned short int)va_arg(ap, unsigned int);
+		lol = (unsigned short int)va_arg(ap, unsigned int);
 	else
-		l = (unsigned int)va_arg(ap, unsigned int);
+		lol = (unsigned int)va_arg(ap, unsigned int);
 
-	str = convert(l, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, params);
-	if (params->hashtag_flag && l)
+	str = convert(lol, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, params);
+	if (params->hashtag_flag && lol)
 	{
 		*--str = 'x';
 		*--str = '0';
@@ -55,7 +55,7 @@ int print_hex(va_list ap, params_t *params)
 	return (c += print_number(str, params));
 }
 
-/* l + c . (same :: up & down) */
+/* l 2 lol + c . (same :: up & down) */
 
 
 /**
@@ -68,19 +68,19 @@ int print_hex(va_list ap, params_t *params)
  */
 int print_HEX(va_list ap, params_t *params)
 {
-	unsigned long l;
+	unsigned long lol;
 	int c = 0;
 	char *str;
 
 	if (params->l_modifier)
-		l = (unsigned long)va_arg(ap, unsigned long);
+		lol = (unsigned long)va_arg(ap, unsigned long);
 	else if (params->h_modifier)
-		l = (unsigned short int)va_arg(ap, unsigned int);
+		lol = (unsigned short int)va_arg(ap, unsigned int);
 	else
-		l = (unsigned int)va_arg(ap, unsigned int);
+		lol = (unsigned int)va_arg(ap, unsigned int);
 
-	str = convert(l, 16, CONVERT_UNSIGNED, params);
-	if (params->hashtag_flag && l)
+	str = convert(lol, 16, CONVERT_UNSIGNED, params);
+	if (params->hashtag_flag && lol)
 	{
 		*--str = 'X';
 		*--str = '0';
@@ -111,7 +111,7 @@ int print_binary(va_list ap, params_t *params)
 	return (c += print_number(str, params));
 }
 
-/* c + l */
+/* c + l 2 lol */
 /**
  * print_octal - unsigned octal no.
  *
@@ -124,17 +124,17 @@ int print_octal(va_list ap, params_t *params)
 {
 	int c = 0;
 	char *str;
-	unsigned long l;
+	unsigned long lol;
 
 	if (params->l_modifier)
-		l = (unsigned long)va_arg(ap, unsigned long);
+		lol = (unsigned long)va_arg(ap, unsigned long);
 	else if (params->h_modifier)
-		l = (unsigned short int)va_arg(ap, unsigned int);
+		lol = (unsigned short int)va_arg(ap, unsigned int);
 	else
-		l = (unsigned int)va_arg(ap, unsigned int);
-	str = convert(l, 8, CONVERT_UNSIGNED, params);
+		lol = (unsigned int)va_arg(ap, unsigned int);
+	str = convert(lol, 8, CONVERT_UNSIGNED, params);
 
-	if (params->hashtag_flag && l)
+	if (params->hashtag_flag && lol)
 		*--str = '0';
 	params->unsign = 1;
 	return (c += print_number(str, params));
