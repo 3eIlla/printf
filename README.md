@@ -34,6 +34,8 @@ ___
 ## Compilation :: Your code will be compiled this way:
 $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 
+### after main.c ::
+gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
 
 _____
 

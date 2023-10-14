@@ -57,7 +57,7 @@ int print_int(va_list ap, params_t *params)
  */
 int print_string(va_list ap, params_t *params)
 {
-	int i = 0, j;
+	unsigned int i = 0, j;
 		unsigned int pad = 0, sum = 0;
 		char *str = va_arg(ap, char *), pad_char = ' ';
 
