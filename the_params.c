@@ -20,7 +20,7 @@ int print_percent(va_list ap, params_t *params)
 
 /*none*/
 /**
- * init_paras - clears struct & reset buf
+ * init_params - clears struct & reset buf
  *
  * @ap: args pointer
  * @params: params struct
