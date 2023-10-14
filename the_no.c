@@ -1,6 +1,6 @@
 #include "main.h"
 /*edit done*/
-/*ptr + array + sign*/
+/*ptr 2ptrs + array 2 grray + sign 2 gsign*/
 /**
  * convert - converter funcss 2  clone o itoa
  *
@@ -43,7 +43,7 @@ char *convert(long int num, int base, int flags, params_t *params)
 }
 
 
-/* n*/
+/* n 2 x */
 /**
  * print_address - address
  *
