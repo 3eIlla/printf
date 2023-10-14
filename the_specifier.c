@@ -1,7 +1,7 @@
 #include "main.h"
 
 
-
+// none
 /**
  * get_print_func - finds the format func
  * @s: the format string
@@ -19,6 +19,7 @@ int get_print_func(char *s, va_list ap, params_t *params)
 	return (0);
 }
 
+// i
 /**
  * get_flag - finds the flag func
  * @s: the format string
@@ -51,6 +52,7 @@ int get_flag(char *s, params_t *params)
 	return (i);
 }
 
+//i
 /**
  * get_modifier - modifier func
  *

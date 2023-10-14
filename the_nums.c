@@ -1,6 +1,6 @@
 #include "main.h"
 
-
+// i
 /**
  * print_number - no. with options
  *
@@ -33,6 +33,7 @@ int print_number(char *str, params_t *params)
 		return (print_number_left_shift(str, params));
 }
 
+// i + n
 /**
  * print_number_right_shift - no. with options
  *
@@ -43,7 +44,8 @@ int print_number(char *str, params_t *params)
  */
 int print_number_right_shift(char *str, params_t *params)
 {
-	unsigned int n = 0, neg, neg2, i = _strlen(str);
+	unsigned int n = 0, neg, neg2;
+	unsigned int i = _strlen(str);
 	char pad_char = ' ';
 
 	if (params->zero_flag && !params->minus_flag)
@@ -76,6 +78,10 @@ int print_number_right_shift(char *str, params_t *params)
 	return (n);
 }
 
+// neg 1 + neg 2  (same :: up & dowm)
+
+
+// i + n
 /**
  * print_number_left_shift - no. with options
  *
@@ -86,7 +92,8 @@ int print_number_right_shift(char *str, params_t *params)
  */
 int print_number_left_shift(char *str, params_t *params)
 {
-	unsigned int n = 0, neg, neg2, i = _strlen(str);
+	unsigned int n = 0, neg, neg2;
+	unsigned int i = _strlen(str);
 	char pad_char = ' ';
 
 	if (params->zero_flag && !params->minus_flag)

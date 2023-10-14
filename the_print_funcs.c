@@ -1,5 +1,6 @@
 #include "main.h"
 
+// non
 /**
  * print_char - chars
  *
@@ -11,7 +12,8 @@
 int print_char(va_list ap, params_t *params)
 {
 	char pad_char = ' ';
-	unsigned int pad = 1, sum = 0, ch = va_arg(ap, int);
+	unsigned int ch = va_arg(ap, int);
+	unsigned int pad = 1, sum = 0;
 
 	if (params->minus_flag)
 		sum += _putchar(ch);
@@ -22,6 +24,7 @@ int print_char(va_list ap, params_t *params)
 	return (sum);
 }
 
+// l
 /**
  * print_int - ints
  *
@@ -43,6 +46,7 @@ int print_int(va_list ap, params_t *params)
 	return (print_number(convert(l, 10, 0, params), params));
 }
 
+// i + j
 /**
  * print_string - strin
  *
@@ -53,8 +57,10 @@ int print_int(va_list ap, params_t *params)
  */
 int print_string(va_list ap, params_t *params)
 {
-	char *str = va_arg(ap, char *), pad_char = ' ';
-	unsigned int pad = 0, sum = 0, i = 0, j;
+	int i = 0, j;
+		unsigned int pad = 0, sum = 0;
+		char *str = va_arg(ap, char *), pad_char = ' ';
+
 
 	(void)params;
 	switch ((int)(!str))
@@ -86,21 +92,7 @@ int print_string(va_list ap, params_t *params)
 	return (sum);
 }
 
-/**
- * print_percent - strin
- *
-* @ap: args pointer
- * @params: params struct
- *
- * Return: chars no.
- */
-int print_percent(va_list ap, params_t *params)
-{
-	(void)ap;
-	(void)params;
-	return (_putchar('%'));
-}
-
+//non
 /**
  * print_S -  specifier's custom form
  *
@@ -111,9 +103,10 @@ int print_percent(va_list ap, params_t *params)
  */
 int print_S(va_list ap, params_t *params)
 {
+	int sum = 0;
 	char *str = va_arg(ap, char *);
 	char *hex;
-	int sum = 0;
+	
 
 	if ((int)(!str))
 		return (_puts(NULL_STRING));

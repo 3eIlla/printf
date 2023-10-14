@@ -1,5 +1,6 @@
 #include "main.h"
 
+// i
 /**
  * get_specifier - finds z formats funcs
  *
@@ -34,6 +35,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 		{"R", print_rot13},
 		{NULL, NULL}
 	};
+
 	int i = 0;
 	while (specifiers[i].specifier)
 	{
@@ -46,6 +48,8 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 	return (NULL);
 }
 
+
+// d
 /**
  * get_width - width from strin
  *

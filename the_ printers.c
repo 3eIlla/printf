@@ -1,5 +1,7 @@
 #include "main.h"
 
+
+// non
 /**
  * print_from_to - range o chars addresses
  *
@@ -22,6 +24,7 @@ int print_from_to(char *start, char *stop, char *except)
 	return (sum);
 }
 
+// len
 /**
  * print_rev - string n reverse
  *
@@ -32,7 +35,8 @@ int print_from_to(char *start, char *stop, char *except)
  */
 int print_rev(va_list ap, params_t *params)
 {
-	int len, sum = 0;
+	int len;
+	int sum = 0;
 	char *str = va_arg(ap, char *);
 	(void)params;
 
@@ -47,6 +51,7 @@ int print_rev(va_list ap, params_t *params)
 	return (sum);
 }
 
+// I + index
 /**
  * print_rot13 - prints string in rot13
  *

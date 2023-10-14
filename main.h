@@ -93,6 +93,10 @@ typedef struct specifier
 int _printf(const char *format, ...);
 
 
+/* File: alx_length.c */
+int _isdigit(int c);
+int _strlen(char *s);
+
 /* File: alx_puts.c  */
 int _putchar(int c);
 int _puts(char *str);
@@ -119,10 +123,6 @@ int print_HEX(va_list ap, params_t *params);
 int print_binary(va_list ap, params_t *params);
 int print_octal(va_list ap, params_t *params);
 
-/* File: the_length.c */
-int _isdigit(int c);
-int _strlen(char *s);
-
 /* File: the_no.c  */
 char *convert(long int num, int base, int flags, params_t *params);
 int print_address(va_list ap, params_t *params);
@@ -134,6 +134,7 @@ int print_number_left_shift(char *str, params_t *params);
 
 
 /* File: the_params.c */
+int print_percent(va_list ap, params_t *params);
 void init_params(params_t *params, va_list ap);
 
 
@@ -141,7 +142,6 @@ void init_params(params_t *params, va_list ap);
 int print_char(va_list ap, params_t *params);
 int print_int(va_list ap, params_t *params);
 int print_string(va_list ap, params_t *params);
-int print_percent(va_list ap, params_t *params);
 int print_S(va_list ap, params_t *params);
 
 /* File: the_specifier.c */

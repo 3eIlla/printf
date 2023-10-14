@@ -1,5 +1,6 @@
 #include "main.h"
 
+// ptr + array + sign
 /**
  * convert - converter funcss 2  clone o itoa
  *
@@ -12,10 +13,12 @@
  */
 char *convert(long int num, int base, int flags, params_t *params)
 {
+	char *ptr;
+	char sign = 0;
+
 	static char *array;
 	static char buffer[50];
-	char sign = 0;
-	char *ptr;
+
 	unsigned long n = num;
 	(void)params;
 
@@ -39,6 +42,8 @@ char *convert(long int num, int base, int flags, params_t *params)
 	return (ptr);
 }
 
+
+// n
 /**
  * print_address - address
  *
@@ -49,8 +54,9 @@ char *convert(long int num, int base, int flags, params_t *params)
  */
 int print_address(va_list ap, params_t *params)
 {
-	unsigned long int n = va_arg(ap, unsigned long int);
 	char *str;
+	unsigned long int n = va_arg(ap, unsigned long int);
+	
 
 	if (!n)
 		return (_puts("(nil)"));

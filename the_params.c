@@ -1,5 +1,24 @@
 #include "main.h"
 
+
+//non
+/**
+ * print_percent - strin
+ *
+* @ap: args pointer
+ * @params: params struct
+ *
+ * Return: chars no.
+ */
+int print_percent(va_list ap, params_t *params)
+{
+	(void)ap;
+	(void)params;
+	return (_putchar('%'));
+}
+
+
+//non
 /**
  * init_paras - clears struct & reset buf
  *

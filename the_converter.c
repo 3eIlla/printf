@@ -1,5 +1,6 @@
 #include "main.h"
 
+// l
 /**
  * print_unsigned - unsigned integer no.
  *
@@ -54,6 +55,9 @@ int print_hex(va_list ap, params_t *params)
 	return (c += print_number(str, params));
 }
 
+// l + c . (same :: up & down) 
+
+
 /**
  * print_HEX - unsigned hex no. n uppercase
  *
@@ -84,6 +88,9 @@ int print_HEX(va_list ap, params_t *params)
 	params->unsign = 1;
 	return (c += print_number(str, params));
 }
+
+
+// c + n
 /**
  * print_binary - unsigned binary no.
  *
@@ -104,6 +111,7 @@ int print_binary(va_list ap, params_t *params)
 	return (c += print_number(str, params));
 }
 
+// c + l
 /**
  * print_octal - unsigned octal no.
  *
@@ -114,9 +122,9 @@ int print_binary(va_list ap, params_t *params)
  */
 int print_octal(va_list ap, params_t *params)
 {
-	unsigned long l;
-	char *str;
 	int c = 0;
+	char *str;
+	unsigned long l;
 
 	if (params->l_modifier)
 		l = (unsigned long)va_arg(ap, unsigned long);
