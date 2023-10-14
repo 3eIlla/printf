@@ -61,7 +61,6 @@ int print_string(va_list ap, params_t *params)
 		unsigned int pad = 0, sum = 0;
 		char *str = va_arg(ap, char *), pad_char = ' ';
 
-
 	(void)params;
 	switch ((int)(!str))
 		case 1:
@@ -103,14 +102,14 @@ int print_string(va_list ap, params_t *params)
  */
 int print_S(va_list ap, params_t *params)
 {
+	char *hex;
 	int sum = 0;
 	char *str = va_arg(ap, char *);
-	char *hex;
 
 
 	if ((int)(!str))
 		return (_puts(NULL_STRING));
-	for (; *str; str++)
+	for ( ; *str; )
 	{
 		if ((*str > 0 && *str < 32) || *str >= 127)
 		{
@@ -125,6 +124,7 @@ int print_S(va_list ap, params_t *params)
 		{
 			sum += _putchar(*str);
 		}
+		str = str + 1;
 	}
 	return (sum);
 }

@@ -4,11 +4,12 @@
 /*none*/
 /**
  * get_print_func - finds the format func
- * @s: the format string
- * @ap: argument pointer
- * @params: the parameters struct
  *
- * Return: the number of bytes printed
+ * @s: strin's format
+ * @ap: args pointer
+ * @params: params struct
+ *
+ * Return: bytes no.
  */
 int get_print_func(char *s, va_list ap, params_t *params)
 {
@@ -16,6 +17,7 @@ int get_print_func(char *s, va_list ap, params_t *params)
 
 	if (f)
 		return (f(ap, params));
+
 	return (0);
 }
 
@@ -23,10 +25,10 @@ int get_print_func(char *s, va_list ap, params_t *params)
 /**
  * get_flag - finds the flag func
  *
- * @s: the format string
- * @params: the parameters struct
+ * @s: strin's format
+ * @params: params struct
  *
- * Return: if flag was valid
+ * Return: f flag (valid
  */
 int get_flag(char *s, params_t *params)
 {
@@ -57,8 +59,8 @@ int get_flag(char *s, params_t *params)
 /**
  * get_modifier - modifier func
  *
- * @s: string format
- * @params: parames struct
+ * @s: strin's format
+ * @params: params struct
  *
  * Return: modifier valid
  */

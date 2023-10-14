@@ -90,7 +90,7 @@ int print_HEX(va_list ap, params_t *params)
 }
 
 
-/* c + n*/
+/* c 2 cc + n*/
 /**
  * print_binary - unsigned binary no.
  *
@@ -103,15 +103,15 @@ int print_binary(va_list ap, params_t *params)
 {
 	unsigned int n = va_arg(ap, unsigned int);
 	char *str = convert(n, 2, CONVERT_UNSIGNED, params);
-	int c = 0;
+	int cc = 0;
 
 	if (params->hashtag_flag && n)
 		*--str = '0';
 	params->unsign = 1;
-	return (c += print_number(str, params));
+	return (cc += print_number(str, params));
 }
 
-/* c + l 2 lol */
+/* c 2 cc + l 2 lol */
 /**
  * print_octal - unsigned octal no.
  *
@@ -122,7 +122,7 @@ int print_binary(va_list ap, params_t *params)
  */
 int print_octal(va_list ap, params_t *params)
 {
-	int c = 0;
+	int cc = 0;
 	char *str;
 	unsigned long lol;
 
@@ -137,5 +137,5 @@ int print_octal(va_list ap, params_t *params)
 	if (params->hashtag_flag && lol)
 		*--str = '0';
 	params->unsign = 1;
-	return (c += print_number(str, params));
+	return (cc += print_number(str, params));
 }
