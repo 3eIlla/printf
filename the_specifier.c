@@ -30,27 +30,27 @@ int get_print_func(char *s, va_list ap, params_t *params)
  */
 int get_flag(char *s, params_t *params)
 {
-	int i = 0;
+	int y = 0;
 
 	switch (*s)
 	{
 		case '+':
-			i = params->plus_flag = 1;
+			y = params->plus_flag = 1;
 			break;
 		case ' ':
-			i = params->space_flag = 1;
+			y = params->space_flag = 1;
 			break;
 		case '#':
-			i = params->hashtag_flag = 1;
+			y = params->hashtag_flag = 1;
 			break;
 		case '-':
-			i = params->minus_flag = 1;
+			y = params->minus_flag = 1;
 			break;
 		case '0':
-			i = params->zero_flag = 1;
+			y = params->zero_flag = 1;
 			break;
 	}
-	return (i);
+	return (y);
 }
 
 /*i*/
