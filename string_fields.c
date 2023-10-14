@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * get_precision - gets the precision from the format string
- * @p: the format string
- * @params: the parameters struct
- * @ap: the argument pointer
+ * get_precision -  precision from strin
+ *
+ * @p: strin format
+ * @params: paramt struct
+ * @ap: arg pointer
  *
  * Return: new pointer
  */

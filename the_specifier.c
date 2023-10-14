@@ -1,42 +1,6 @@
 #include "main.h"
 
-/**
- * get_specifier - finds the format func
- * @s: the format string
- *
- * Return: the number of bytes printed
- */
-int (*get_specifier(char *s))(va_list ap, params_t *params)
-{
-	specifier_t specifiers[] = {
-		{"c", print_char},
-		{"d", print_int},
-		{"i", print_int},
-		{"s", print_string},
-		{"%", print_percent},
-		{"b", print_binary},
-		{"o", print_octal},
-		{"u", print_unsigned},
-		{"x", print_hex},
-		{"X", print_HEX},
-		{"p", print_address},
-		{"S", print_S},
-		{"r", print_rev},
-		{"R", print_rot13},
-		{NULL, NULL}
-	};
-	int i = 0;
 
-	while (specifiers[i].specifier)
-	{
-		if (*s == specifiers[i].specifier[0])
-		{
-			return (specifiers[i].f);
-		}
-		i++;
-	}
-	return (NULL);
-}
 
 /**
  * get_print_func - finds the format func
@@ -88,11 +52,12 @@ int get_flag(char *s, params_t *params)
 }
 
 /**
- * get_modifier - finds the modifier func
- * @s: the format string
- * @params: the parameters struct
+ * get_modifier - modifier func
  *
- * Return: if modifier was valid
+ * @s: string format
+ * @params: parames struct
+ *
+ * Return: modifier valid
  */
 int get_modifier(char *s, params_t *params)
 {
@@ -108,30 +73,4 @@ int get_modifier(char *s, params_t *params)
 		break;
 	}
 	return (i);
-}
-
-/**
- * get_width - gets the width from the format string
- * @s: the format string
- * @params: the parameters struct
- * @ap: the argument pointer
- *
- * Return: new pointer
- */
-char *get_width(char *s, params_t *params, va_list ap)
-{
-	int d = 0;
-
-	if (*s == '*')
-	{
-		d = va_arg(ap, int);
-		s++;
-	}
-	else
-	{
-		while (_isdigit(*s))
-			d = d * 10 + (*s++ - '0');
-	}
-	params->width = d;
-	return (s);
 }
