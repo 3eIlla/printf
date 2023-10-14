@@ -138,7 +138,7 @@ R: prints the rot13'ed string
 
 15. *
 \#advanced
-All the above options work well together.
+ll the above options work well together.
 
 
 
