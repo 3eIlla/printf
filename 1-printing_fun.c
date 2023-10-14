@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_char - prints character
- * @ap: argument pointer
- * @params: the parameters struct
+ * print_char - prints char
+ * @ap: pointer
+ * @params: the struct
  *
- * Return: number chars printed
+ * Return: chars
  */
 int print_char(va_list ap, params_t *params)
 {
@@ -22,11 +22,11 @@ int print_char(va_list ap, params_t *params)
 }
 
 /**
- * print_int - prints integer
- * @ap: argument pointer
- * @params: the parameters struct
+ * print_int - prints int
+ * @ap: pointer
+ * @params: the struct
  *
- * Return: number chars printed
+ * Return: chars
  */
 int print_int(va_list ap, params_t *params)
 {
@@ -42,11 +42,11 @@ int print_int(va_list ap, params_t *params)
 }
 
 /**
- * print_string - prints string
- * @ap: argument pointer
- * @params: the parameters struct
+ * print_string - prints the string
+ * @ap: pointer
+ * @params: struct
  *
- * Return: number chars printed
+ * Return: chars
  */
 int print_string(va_list ap, params_t *params)
 {
@@ -79,54 +79,6 @@ int print_string(va_list ap, params_t *params)
 				sum += _putchar(*str++);
 		else
 			sum += _puts(str);
-	}
-	return (sum);
-}
-
-/**
- * print_percent - prints string
- * @ap: argument pointer
- * @params: the parameters struct
- *
- * Return: number chars printed
- */
-int print_percent(va_list ap, params_t *params)
-{
-	(void)ap;
-	(void)params;
-	return (_putchar('%'));
-}
-
-/**
- * print_S - custom format specifier
- * @ap: argument pointer
- * @params: the parameters struct
- *
- * Return: number chars printed
- */
-int print_S(va_list ap, params_t *params)
-{
-	char *str = va_arg(ap, char *);
-	char *hex;
-	int sum = 0;
-
-	if ((int)(!str))
-		return (_puts(NULL_STRING));
-	for (; *str; str++)
-	{
-		if ((*str > 0 && *str < 32) || *str >= 127)
-		{
-			sum += _putchar('\\');
-			sum += _putchar('x');
-			hex = convert(*str, 16, 0, params);
-			if (!hex[1])
-				sum += _putchar('0');
-			sum += _puts(hex);
-		}
-		else
-		{
-			sum += _putchar(*str);
-		}
 	}
 	return (sum);
 }
