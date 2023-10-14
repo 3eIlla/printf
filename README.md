@@ -138,10 +138,10 @@ R: prints the rot13'ed string
 
 15. *
 \#advanced
-ll the above options work well together.
+All the above options work well together.
 
 
 
 
 
-*hTE end*
+*THE end*
